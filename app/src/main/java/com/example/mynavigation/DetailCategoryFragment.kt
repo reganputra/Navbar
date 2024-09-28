@@ -26,11 +26,11 @@ class DetailCategoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
             // menggunakan Safearg
-//        val dataName = DetailCategoryFragmentArgs.fromBundle(arguments as Bundle).name
-//        val dataDescription = DetailCategoryFragmentArgs.fromBundle(arguments as Bundle).stock
+        val dataName = DetailCategoryFragmentArgs.fromBundle(arguments as Bundle).name
+        val dataDescription = DetailCategoryFragmentArgs.fromBundle(arguments as Bundle).stock
 
-        val dataName = arguments?.getString(CategoryFragment.EXTRA_NAME)
-        val dataDescription = arguments?.getLong(CategoryFragment.EXTRA_STOCK)
+//        val dataName = arguments?.getString(CategoryFragment.EXTRA_NAME)
+//        val dataDescription = arguments?.getLong(CategoryFragment.EXTRA_STOCK)
 
         binding.tvCategoryName.text = dataName
         binding.tvCategoryDescription.text = "Stock : $dataDescription"
